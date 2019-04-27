@@ -120,4 +120,18 @@
   <metadata name="openMidiDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="tbOut.Text" xml:space="preserve">
+    <value>JUSTICE ETERNAL !
+
+使用方法：
+  点击浏览，读入MIDI文件，然后点击转换即可。
+  如果节奏划分不满意，可调整临界值。
+  如果八度音高不满意，可相应调整。
+
+注意：
+  本软件自动读取所有音轨，如果某个音轨同时出现两个音，不会进行合并。所以请确保旋律音轨同时只有一个音。
+  超过正常音域的音，会显示为 ??（我故意的）
+
+反馈、获取更新请前往发布页面。（左下角有链接）</value>
+  </data>
 </root>

@@ -11,10 +11,18 @@ namespace AcgmuseParser.Util
 {
     class MidiConverter
     {
-        internal static string ToJe(string fileName, int threshold1, int threshold2, int threshold3, int octBias = 0)
+        internal static string ToJe(string fileName, int threshold1, int threshold2, int threshold3, int octBias = 0, bool spl = true)
         {
+            MidiFile midiFile = null;
 
-            var midiFile = MidiFile.Read(fileName);
+            try
+            {
+                midiFile = MidiFile.Read(fileName);
+            }
+            catch (Exception)
+            {
+                return "转换失败，文件是坏的。";
+            }
             var sb = new StringBuilder();
             
             foreach (var trackChunk in midiFile.Chunks.OfType<TrackChunk>())
@@ -32,7 +40,7 @@ namespace AcgmuseParser.Util
                     long deltaTime = 0;
                     try
                     {
-                        sb.Append(NoteTable.Dict[x.NoteNumber]/* + ":" + deltaTime*/ + "");
+                        sb.Append(NoteTable.Dict[x.NoteNumber]/* + ":" + deltaTime*/ +( spl?" ":""));
                     }
                     catch (System.Collections.Generic.KeyNotFoundException)
                     {

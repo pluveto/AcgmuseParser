@@ -77,7 +77,7 @@ namespace AcgmuseParser.Windows
             
                 tbOut.BeginInvoke((Action)(()=>{
                     tbOut.Text = Util.MidiConverter.ToJe(openMidiDialog.FileName,
-                    trackBarFirst.Value, trackBarSecond.Value, trackBarThird.Value, trackBarOct.Value);
+                    trackBarFirst.Value, trackBarSecond.Value, trackBarThird.Value, trackBarOct.Value,cbSplitSingleNote.Checked);
                     btnGo.Enabled = true;
                 }));
                 btnGo.Enabled = false;
@@ -88,6 +88,24 @@ namespace AcgmuseParser.Windows
         private void BtnCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(tbOut.Text);
+        }
+
+        private void LinkToGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/pluveto/AcgmuseParser");
+
+        }
+
+        private void LinkToAcgmuse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://je.acgmuse.com/viewtopic.php?f=14&t=39");
+
+        }
+
+        private void BtnMergeBra_Click(object sender, EventArgs e)
+        {
+            tbOut.Text = tbOut.Text.Replace("][", "").Replace(")(", "")
+                .Replace("] [", " ").Replace(") (", " ");
         }
     }
 }

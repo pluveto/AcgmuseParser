@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.openMidiDialog = new System.Windows.Forms.OpenFileDialog();
             this.tbOut = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +49,11 @@
             this.lblFirstClass = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCopy = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.linkToGithub = new System.Windows.Forms.LinkLabel();
+            this.linkToAcgmuse = new System.Windows.Forms.LinkLabel();
+            this.btnMergeBra = new System.Windows.Forms.Button();
+            this.cbSplitSingleNote = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarOct)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarThird)).BeginInit();
@@ -66,13 +72,15 @@
             this.tbOut.Location = new System.Drawing.Point(370, 58);
             this.tbOut.Multiline = true;
             this.tbOut.Name = "tbOut";
+            this.tbOut.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.tbOut.Size = new System.Drawing.Size(387, 499);
             this.tbOut.TabIndex = 0;
+            this.tbOut.Text = resources.GetString("tbOut.Text");
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(368, 14);
+            this.label1.Location = new System.Drawing.Point(368, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 1;
@@ -108,7 +116,7 @@
             // 
             // btnGo
             // 
-            this.btnGo.Location = new System.Drawing.Point(19, 312);
+            this.btnGo.Location = new System.Drawing.Point(14, 447);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(339, 27);
             this.btnGo.TabIndex = 5;
@@ -248,11 +256,72 @@
             this.btnCopy.UseVisualStyleBackColor = true;
             this.btnCopy.Click += new System.EventHandler(this.BtnCopy_Click);
             // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(14, 490);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(356, 48);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "本软件基于 GPLv3.0 开源协议发布\r\n作者：Pluveto（pluvet.com | i@pluvet.com）\r\n版本：1.0（2019/4/27）";
+            // 
+            // linkToGithub
+            // 
+            this.linkToGithub.AutoSize = true;
+            this.linkToGithub.LinkArea = new System.Windows.Forms.LinkArea(5, 11);
+            this.linkToGithub.Location = new System.Drawing.Point(16, 534);
+            this.linkToGithub.Name = "linkToGithub";
+            this.linkToGithub.Size = new System.Drawing.Size(103, 19);
+            this.linkToGithub.TabIndex = 11;
+            this.linkToGithub.TabStop = true;
+            this.linkToGithub.Text = "开源地址：Github";
+            this.linkToGithub.UseCompatibleTextRendering = true;
+            this.linkToGithub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkToGithub_LinkClicked);
+            // 
+            // linkToAcgmuse
+            // 
+            this.linkToAcgmuse.AutoSize = true;
+            this.linkToAcgmuse.LinkArea = new System.Windows.Forms.LinkArea(5, 11);
+            this.linkToAcgmuse.Location = new System.Drawing.Point(125, 534);
+            this.linkToAcgmuse.Name = "linkToAcgmuse";
+            this.linkToAcgmuse.Size = new System.Drawing.Size(110, 19);
+            this.linkToAcgmuse.TabIndex = 12;
+            this.linkToAcgmuse.TabStop = true;
+            this.linkToAcgmuse.Text = "更新发布：Acgmuse";
+            this.linkToAcgmuse.UseCompatibleTextRendering = true;
+            this.linkToAcgmuse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkToAcgmuse_LinkClicked);
+            // 
+            // btnMergeBra
+            // 
+            this.btnMergeBra.Location = new System.Drawing.Point(601, 29);
+            this.btnMergeBra.Name = "btnMergeBra";
+            this.btnMergeBra.Size = new System.Drawing.Size(75, 23);
+            this.btnMergeBra.TabIndex = 13;
+            this.btnMergeBra.Text = "括号合并";
+            this.btnMergeBra.UseVisualStyleBackColor = true;
+            this.btnMergeBra.Click += new System.EventHandler(this.BtnMergeBra_Click);
+            // 
+            // cbSplitSingleNote
+            // 
+            this.cbSplitSingleNote.AutoSize = true;
+            this.cbSplitSingleNote.Checked = true;
+            this.cbSplitSingleNote.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbSplitSingleNote.Location = new System.Drawing.Point(14, 290);
+            this.cbSplitSingleNote.Name = "cbSplitSingleNote";
+            this.cbSplitSingleNote.Size = new System.Drawing.Size(156, 16);
+            this.cbSplitSingleNote.TabIndex = 14;
+            this.cbSplitSingleNote.Text = "隔开单音（有利于排版）";
+            this.cbSplitSingleNote.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 562);
+            this.Controls.Add(this.cbSplitSingleNote);
+            this.Controls.Add(this.btnMergeBra);
+            this.Controls.Add(this.linkToAcgmuse);
+            this.Controls.Add(this.linkToGithub);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.trackBarOct);
@@ -263,6 +332,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbOut);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Acgmuse MIDI->Je谱 转换器";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -299,5 +370,10 @@
         private System.Windows.Forms.Label lblFirstClass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCopy;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel linkToGithub;
+        private System.Windows.Forms.LinkLabel linkToAcgmuse;
+        private System.Windows.Forms.Button btnMergeBra;
+        private System.Windows.Forms.CheckBox cbSplitSingleNote;
     }
 }
