@@ -19,7 +19,7 @@ namespace AcgmuseParser.Util
             {
                 midiFile = MidiFile.Read(fileName);
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return "转换失败，文件是坏的。";
             }
