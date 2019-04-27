@@ -1,0 +1,13 @@
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\bin\Debug\AcgmuseParser.exe.config
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\bin\Debug\AcgmuseParser.exe
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\bin\Debug\AcgmuseParser.pdb
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\obj\Debug\AcgmuseParser.csprojAssemblyReference.cache
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\obj\Debug\AcgmuseParser.Properties.Resources.resources
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\obj\Debug\AcgmuseParser.Windows.MainForm.resources
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\obj\Debug\AcgmuseParser.csproj.GenerateResource.cache
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\obj\Debug\AcgmuseParser.csproj.CoreCompileInputs.cache
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\obj\Debug\AcgmuseParser.exe
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\obj\Debug\AcgmuseParser.pdb
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\bin\Debug\Melanchall.DryWetMidi.dll
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\bin\Debug\Melanchall.DryWetMidi.xml
+C:\Users\zhangzijing\source\repos\AcgmuseParser\AcgmuseParser\obj\Debug\AcgmuseParser.csproj.CopyComplete
