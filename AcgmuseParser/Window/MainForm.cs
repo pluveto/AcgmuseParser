@@ -77,7 +77,7 @@ namespace AcgmuseParser.Windows
             
                 tbOut.BeginInvoke((Action)(()=>{
                     tbOut.Text = Util.MidiConverter.ToJe(openMidiDialog.FileName,
-                    trackBarFirst.Value, trackBarSecond.Value, trackBarThird.Value, trackBarOct.Value,cbSplitSingleNote.Checked);
+                    trackBarFirst.Value, trackBarSecond.Value, trackBarThird.Value, trackBarOct.Value,cbSplitSingleNote.Checked, Convert.ToInt32(numericUpDownSemitone.Value));
                     btnGo.Enabled = true;
                 }));
                 btnGo.Enabled = false;

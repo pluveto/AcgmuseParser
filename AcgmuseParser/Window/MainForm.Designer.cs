@@ -54,11 +54,14 @@
             this.linkToAcgmuse = new System.Windows.Forms.LinkLabel();
             this.btnMergeBra = new System.Windows.Forms.Button();
             this.cbSplitSingleNote = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDownSemitone = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarOct)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarThird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSecond)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFirst)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSemitone)).BeginInit();
             this.SuspendLayout();
             // 
             // openMidiDialog
@@ -262,7 +265,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(356, 48);
             this.label3.TabIndex = 10;
-            this.label3.Text = "本软件基于 GPLv3.0 开源协议发布\r\n作者：Pluveto（pluvet.com | i@pluvet.com）\r\n版本：1.0（2019/4/27）";
+            this.label3.Text = "本软件基于 GPLv3.0 开源协议发布\r\n作者：Pluveto（pluvet.com | i@pluvet.com）\r\n版本：1.1（2019/7/17）";
             // 
             // linkToGithub
             // 
@@ -305,18 +308,46 @@
             this.cbSplitSingleNote.AutoSize = true;
             this.cbSplitSingleNote.Checked = true;
             this.cbSplitSingleNote.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbSplitSingleNote.Location = new System.Drawing.Point(14, 290);
+            this.cbSplitSingleNote.Location = new System.Drawing.Point(19, 366);
             this.cbSplitSingleNote.Name = "cbSplitSingleNote";
             this.cbSplitSingleNote.Size = new System.Drawing.Size(156, 16);
             this.cbSplitSingleNote.TabIndex = 14;
             this.cbSplitSingleNote.Text = "隔开单音（有利于排版）";
             this.cbSplitSingleNote.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 312);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "半音偏移";
+            // 
+            // numericUpDownSemitone
+            // 
+            this.numericUpDownSemitone.Location = new System.Drawing.Point(81, 310);
+            this.numericUpDownSemitone.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numericUpDownSemitone.Minimum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownSemitone.Name = "numericUpDownSemitone";
+            this.numericUpDownSemitone.Size = new System.Drawing.Size(64, 21);
+            this.numericUpDownSemitone.TabIndex = 16;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 562);
+            this.Controls.Add(this.numericUpDownSemitone);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.cbSplitSingleNote);
             this.Controls.Add(this.btnMergeBra);
             this.Controls.Add(this.linkToAcgmuse);
@@ -343,6 +374,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarThird)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSecond)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFirst)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSemitone)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,5 +407,7 @@
         private System.Windows.Forms.LinkLabel linkToAcgmuse;
         private System.Windows.Forms.Button btnMergeBra;
         private System.Windows.Forms.CheckBox cbSplitSingleNote;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numericUpDownSemitone;
     }
 }

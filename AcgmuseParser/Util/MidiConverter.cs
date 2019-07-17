@@ -11,7 +11,7 @@ namespace AcgmuseParser.Util
 {
     class MidiConverter
     {
-        internal static string ToJe(string fileName, int threshold1, int threshold2, int threshold3, int octBias = 0, bool spl = true)
+        internal static string ToJe(string fileName, int threshold1, int threshold2, int threshold3, int octBias = 0, bool spl = true, int semitoneBias = 0)
         {
             MidiFile midiFile = null;
 
@@ -40,7 +40,7 @@ namespace AcgmuseParser.Util
                     long deltaTime = 0;
                     try
                     {
-                        sb.Append(NoteTable.Dict[x.NoteNumber]/* + ":" + deltaTime*/ +( spl?" ":""));
+                        sb.Append(NoteTable.Dict[x.NoteNumber + semitoneBias]/* + ":" + deltaTime*/ +( spl?" ":""));
                     }
                     catch (System.Collections.Generic.KeyNotFoundException)
                     {
